@@ -34,8 +34,12 @@ const HERO_FILE = path.join(DATA_DIR, "hero.json");
 const SERVICES_FILE = path.join(DATA_DIR, "services.json");
 const ANALYTICS_FILE = path.join(DATA_DIR, "analytics.json");
 
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+} catch (err) {
+  console.warn("Could not create database directory:", err);
 }
 
 // Preset Default Hero Slides
