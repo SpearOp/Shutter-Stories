@@ -669,6 +669,11 @@ app.post("/api/gemini/generate", async (req, res) => {
 
 // Vite server orchestration
 async function assembleGrid() {
+  if (process.env.VERCEL) {
+    console.log("RUNNING IN VERCEL SERVERLESS ENVIRONMENT");
+    return;
+  }
+
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -691,3 +696,5 @@ async function assembleGrid() {
 }
 
 assembleGrid();
+
+export default app;

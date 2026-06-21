@@ -16,7 +16,6 @@ import { GlitchBlogs } from "./components/GlitchBlogs";
 import { GlitchFooter } from "./components/GlitchFooter";
 import { AdminLogin } from "./components/AdminLogin";
 import { AdminDashboard } from "./components/AdminDashboard";
-import { AdminPage } from "./pages/AdminPage";
 
 const BifurcationDivider: React.FC = () => (
   <div className="w-full overflow-hidden leading-none z-20 relative pointer-events-none select-none">
