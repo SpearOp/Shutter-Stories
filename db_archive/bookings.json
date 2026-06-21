@@ -1,0 +1,30 @@
+[
+  {
+    "id": "book-1",
+    "clientName": "Val-Yor & Sol-A",
+    "sectorEmail": "val_sol@apex.conglom",
+    "commLink": "+1-999-CYBER-99",
+    "eventDate": "2026-07-25",
+    "eventType": "CARBON_UNION_RE_BONDING",
+    "coordinateVenue": "CLOUDS OF SANTORINI ORATOR LAYERS",
+    "packageTier": "ROYAL",
+    "ledgerHash": "0x7FBA113CE92",
+    "message": "WE DEMAND SPECTRAL TIME SENSORS AND THE FULL CHRONO ARRAY.",
+    "status": "ACCEPTED",
+    "timestamp": "2026-06-18T01:00:00Z"
+  },
+  {
+    "id": "book-2",
+    "clientName": "Nakamoto Corp Representative",
+    "sectorEmail": "satoshi@naka.digital",
+    "commLink": "+81-300-3001",
+    "eventDate": "2026-09-12",
+    "eventType": "CONGLOMERATE_SECTOR_LOGS",
+    "coordinateVenue": "KYOTO BLACKOUT CORE DOME D",
+    "packageTier": "SIGNATURE",
+    "ledgerHash": "0x89CDE3204FA",
+    "message": "Sub-optimal ambient lightning predicted. Calibrate visual sensors for heavy neon scattering.",
+    "status": "PENDING",
+    "timestamp": "2026-06-18T05:22:00Z"
+  }
+]

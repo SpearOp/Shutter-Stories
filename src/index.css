@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-gold: #B89058;
+  --color-luxury-gold-champagne: #C9A66B;
+  --color-luxury-gold-antique: #A97B42;
+  --color-luxury-dark: #1A1A1A;
+  --color-luxury-charcoal: #2A2A2A;
+  --color-luxury-espresso: #5A4232;
+  --color-luxury-ivory: #F7F3EE;
+  --color-luxury-warm-ivory: #F7F3EE;
+  --color-luxury-soft-cream: #F4EEE6;
+  --color-luxury-pearl-white: #FCFAF8;
+  --color-luxury-dark-charcoal: #2A2A2A;
+  --color-gold-glow: #C9A66B;
+  --color-warm-amber: #A97B42;
+  --color-warm-gray: #6B6B6B;
+  
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #F7F3EE;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Beautiful custom elegant scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A66B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B89058;
+}
+
+/* Custom premium visual overlays - removed glitch/scanline layers */
+.luxury-overlay {
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+}
+
+/* Slide up and fade-in animations for custom premium feel */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Style for elegant line */
+.elegant-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #bfa15f, transparent);
+}
+
+/* Hide scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   RETRO-FUTURIST CORRUPTED_UI PROTOCOL v9.7 - CUSTOM CYBER STYLES
+   ========================================================================== */
+
+@keyframes cyber-glitch {
+  0% { clip-path: inset(40% 0 61% 0); transform: skew(0.3deg); }
+  20% { clip-path: inset(92% 0 1% 0); transform: skew(-0.5deg); }
+  45% { clip-path: inset(12% 0 85% 0); transform: skew(0.8deg); }
+  60% { clip-path: inset(80% 0 5% 0); transform: skew(-1deg); }
+  85% { clip-path: inset(50% 0 45% 0); transform: skew(0.5deg); }
+  100% { clip-path: inset(40% 0 61% 0); transform: skew(0deg); }
+}
+
+@keyframes terminal-scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes matrix-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 0.99; filter: hue-rotate(0deg) saturate(1); }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.6; filter: hue-rotate(90deg) saturate(1.5); }
+}
+
+@keyframes unstable-tear {
+  0% { transform: translate(0, 0) scale(1); }
+  10% { transform: translate(-2px, 1px) skewX(6deg); }
+  20% { transform: translate(3px, -2px) skewX(-8deg); }
+  30% { transform: translate(0, 0); }
+  90% { transform: translate(0, 0); }
+  95% { transform: translate(2px, -1px) skewX(-4deg); }
+  100% { transform: translate(-2px, 2px) skewX(5deg); }
+}
+
+@keyframes crt-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), inset 0 0 12px rgba(0, 255, 255, 0.3); }
+}
+
+.crt-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanline::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-scroller {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 255, 255, 0.08) 10%, transparent 11%);
+  animation: terminal-scanline 5s linear infinite;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.cyber-glitch-active {
+  animation: matrix-flicker 4s infinite;
+}
+
+.cyber-button-cyan {
+  border: 1.5px solid #00FFFF;
+  color: #00FFFF;
+  background: #000000;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  text-shadow: 0 0 4px #00FFFF;
+}
+
+.cyber-button-cyan:hover {
+  background: #00FFFF !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+  animation: unstable-tear 0.15s infinite;
+  box-shadow: 0 0 12px #00FFFF;
+}
+
+.cyber-button-magenta {
+  border: 1.5px solid #FF00FF;
+  color: #FF00FF;
+  background: #000000;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  text-shadow: 0 0 4px #FF00FF;
+}
+
+.cyber-button-magenta:hover {
+  background: #FF00FF !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+  animation: unstable-tear 0.15s infinite;
+  box-shadow: 0 0 12px #FF00FF;
+}
+
+.cyber-text-cyan {
+  color: #00FFFF !important;
+  text-shadow: 0 0 5px #00FFFF;
+}
+
+.cyber-text-magenta {
+  color: #FF00FF !important;
+  text-shadow: 0 0 5px #FF00FF;
+}
+
+.cyber-border-cyan {
+  border-color: #00FFFF !important;
+}
+
+.cyber-border-magenta {
+  border-color: #FF00FF !important;
+}
+
+.cyber-terminal {
+  background-color: #000000 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+@keyframes panoramic-scroll {
+  0% {
+    transform: scale(1.15) translateX(-3%);
+  }
+  50% {
+    transform: scale(1.15) translateX(3%);
+  }
+  100% {
+    transform: scale(1.15) translateX(-3%);
+  }
+}
+
+.animate-panoramic {
+  animation: panoramic-scroll 36s ease-in-out infinite;
+}
+
+

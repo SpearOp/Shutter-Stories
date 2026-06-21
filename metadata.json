@@ -1,0 +1,6 @@
+{
+  "name": "Shutter Stories",
+  "description": "Premium luxury photography & cybernetic cinematography. Preserving elite memories with pristine glitch typography, digital noise overlays, and real-time archival systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
